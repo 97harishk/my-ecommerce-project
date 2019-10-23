@@ -1,0 +1,33 @@
+.Search-bar{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    color: #ffff;
+   
+}
+.Search-input{
+    height: 100%;
+    width: 90%;
+    padding: 12px 12px;
+    box-sizing: border-box;
+}
+.Search-input input{
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    font-size: 16px;
+}
+.Search-icon{
+    display: flex;
+    width: 10%;
+    height: 100%;
+    font-size: 18px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #0077ff;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+}

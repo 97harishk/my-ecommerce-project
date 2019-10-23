@@ -1,0 +1,24 @@
+.Header-top{
+    width: 100%;
+    height: 32px;
+    display: flex;
+    padding: 4px 32px;
+    font-size: 14px;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+.Header-top h5{
+    position: relative;
+    color: green;
+    /* animation: animate 8s linear infinite; */
+}
+@keyframes animate {
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
