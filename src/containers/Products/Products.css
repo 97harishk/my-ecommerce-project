@@ -1,0 +1,19 @@
+.product-container{
+    width: 100%;
+    }
+.product-filter-container{
+    position: relative;
+    width: 80%;
+    height: 5rem;
+    left: 10%;
+    background-color: yellowgreen;
+}
+.product-item-container{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px 0px;
+    justify-content: space-around;
+}

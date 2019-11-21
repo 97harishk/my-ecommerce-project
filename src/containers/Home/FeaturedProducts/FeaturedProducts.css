@@ -40,12 +40,14 @@
         background-color: #888;
         box-shadow: 1px 1px 4px #888 ;
     }
-    .featured-product-container{
+    .featurd-product-container{
         width: 100%;
-        height: 200px; 
+        height: 240px;
+        overflow: hidden;
+    }
+    .featured-product-wrapper{
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
+        width: 100%;
+        flex-flow: row; 
     }
     

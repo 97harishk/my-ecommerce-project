@@ -1,0 +1,16 @@
+.Auth-icon{
+    height: 48px;
+    font-size: 36px;
+    color:#ffffff;  
+    display: flex;
+    align-items : center;
+   text-decoration: none;
+}
+.Auth-icon i{
+font-size: 0.5em;
+color: white;
+cursor: pointer;
+}
+.Auth-icon i:hover{
+    color: #f9b115;
+    }

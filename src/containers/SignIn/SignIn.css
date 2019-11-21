@@ -1,0 +1,44 @@
+.auth-section{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0px;
+}
+.auth-container{
+    width: 350px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 1px 1px 12px grey;
+}
+.auth-container-top{
+    display: flex;
+    align-items: center;
+    height: 35px;
+    justify-content: space-around;
+    font-size: 18px;
+    box-sizing: border-box;
+    color: rgb(251, 197, 80);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background-color: #333333;
+}
+.auth-container-bottom{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    padding: 18px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    
+}
+.auth-container-bottom .link-control{
+        text-decoration: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        padding: 4px 6px;
+        color: #333333;
+        transition: 0.5s;
+}
+.auth-container-bottom .link-control:hover{
+    border: 1px solid #333333;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import img1 from '../../../assets/images/img/img1.jpg'
 import img2 from '../../../assets/images/img/img2.jpg'
-
+import './AdvertiseBanner.css'
 
 export class AdvertiseBanner extends Component {
     render() {

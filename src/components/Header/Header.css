@@ -4,6 +4,8 @@
     display: flex;
     padding: 12px 36px;
     box-sizing: border-box;
+    align-items: center;
+    background-color: #333333;
     justify-content: space-between;
     z-index: 30;
 }
@@ -11,65 +13,43 @@
     height: 48px;
     width: 48px;
 }
-.web-logo{
-    width: 150px;
-}
-.web-logo img{
-    width: 100%;
-}
-.Search-bar-container{
-    height: 48px;
-    width: 480px;
-}
-.Wish-list-icon{
-    height: 48px;
-    font-size: 48px;
+.nav-section{
     display: flex;
-    align-items : center;
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
-.Wish-list-icon i{
-    font-size: 0.5em;
-    color:red;  
-    cursor: pointer;
+
+@media(max-width: 500px){
+    .nav-section{
+        display: none;
     }
-.Wish-list-icon i{
-    color:red;  
-     }
-.Cart-icon{
-    height: 48px;
-    font-size: 48px;
-    color:#0077ff;  
-    display: flex;
-    align-items : center;
-}
-.Cart-icon i{
-font-size: 0.8em;
-cursor: pointer;
 }
 .Header-bottom{
     width: 100%;
     height: 48px;
-    display: flex;
-    justify-content: space-between;
     background-color: #f9f9f9;
 }
-.header-bottom-right-icon{
-width: 40%;
-
-}
-.header-bottom-left-icon ul,
-.header-bottom-right-icon ul{
+.header-bottom-icon{
     display: flex;
+    height: 48px;
     text-decoration: none;
-    justify-content: space-between;
-    list-style: none;
+    float: right;
+    text-transform: uppercase;
 }
-.header-bottom-left-icon ul li,
-.header-bottom-right-icon ul li{
+.header-bottom-icon .nav-link{
     font-weight: bold;
-    vertical-align: middle;
-    position: relative;
-} 
-.nav-link{
+        padding: 12px 4px;
+        margin-right: 36px;
+    color: #333333;
+    letter-spacing: 2px;
     text-decoration: none;
+    transition: 0.3s;
 } 
+.header-bottom-icon .nav-link:active,
+.active
+{
+    background-color: #ffffff;
+    border-bottom: 4px solid #333333;
+}   

@@ -1,4 +1,4 @@
-import * as actionTypes from '../actions/actions'
+import * as actionTypes from '../Products/ProductsAction'
 
 const InitialState = {
     products:[],
@@ -7,13 +7,13 @@ const InitialState = {
 
 const reducers  = (state =InitialState, action ) =>{
     switch(action.type){
-        case actionTypes.SET_PRODUCTS : 
+        case actionTypes.INIT_PRODUCTS: 
         return {
             ...state,
-            product: action.products,
+            products: action.products,
             error: false
         }
-        case actionTypes.FETCH_PRODUCTS_FAILED : 
+        case actionTypes.INIT_PRODUCTS_FAILED : 
         return {
             ...state,
             error: true
@@ -23,5 +23,5 @@ const reducers  = (state =InitialState, action ) =>{
                 ...state
             }
     }
-}
+}       
 export default reducers

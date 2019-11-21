@@ -1,0 +1,15 @@
+.Wish-list-icon{
+    height: 48px;
+    font-size: 48px;
+    display: flex;
+    align-items : center;
+    text-decoration: none;
+}
+.Wish-list-icon i{
+    font-size: 0.5em;
+    color: rgba(255, 0, 0, 0.8);  
+    cursor: pointer;
+    }
+.Wish-list-icon i:hover{
+    color:rgba(255, 0, 0, 1) 
+     }

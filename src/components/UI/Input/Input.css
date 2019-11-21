@@ -1,0 +1,33 @@
+.Input-container{
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.Input{
+    width: 80%;
+    padding: 12px 0px;
+}
+.Label{
+    font-weight: bold;
+    display: block; 
+    margin-bottom: 8px;
+    color: #4c4f54;
+}
+.InputElement {
+    outline: none;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #4c4f54;
+    background-color: white;
+    font: inherit;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.InputElement:focus
+{
+    border: 1px solid   rgb(251, 197, 80);
+    outline: none;
+    background-color: white;
+    box-shadow: 1px 1px 6px rgb(251, 197, 80);
+}

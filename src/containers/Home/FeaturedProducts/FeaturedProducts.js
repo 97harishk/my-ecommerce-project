@@ -2,13 +2,12 @@ import React, { Component } from 'react'
 import './FeaturedProducts.css'
 import FeatureProduct from './FeatureProduct/FeatureProduct'
 import {connect} from 'react-redux'
-import *  as  setProductAction from '../../../store/actions/productAction'
+import *  as  productAction from '../../../store/Products/ProductsAction'
 export class FeaturedProducts extends Component {
     state = {
         products: [] 
      }
      componentDidMount(){
-         
         this.props.setProducts();
      }
     render() {
@@ -30,21 +29,24 @@ export class FeaturedProducts extends Component {
                             </div>
                         </div>
                 </div>
-                <div className="featured-product-container">
-                    {featureProduct}
+                <div className="featurd-product-container" >
+                    <div className="featured-product-wrapper">
+                        {featureProduct}
+                    </div>
                 </div>
+
             </div>
         )
     }
 }
 const mapStateToProps = state =>{
     return{
-        productS: state.products
+        products: state.productReducers.products
     }
 }
 const mapDispatchToProps = dispatch =>{
     return{
-        setProducts: () => dispatch(setProductAction.initProducts())
+        setProducts: () => dispatch(productAction.initProducts())
    }    
 }
 export default connect(mapStateToProps, mapDispatchToProps )(FeaturedProducts)
