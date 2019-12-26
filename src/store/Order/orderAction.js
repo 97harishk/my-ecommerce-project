@@ -1,5 +1,8 @@
 import Axios from '../../axios'
 
+export const INIT_ORDER = 'INIT_ORDER'
+export const INIT_ORDER_FAILED = 'INIT_ORDER_FAILED'
+
 export const ORDER_ADDED = 'ORDER_ADDED'
 
 export const addOrder = (localId, order) =>{
@@ -15,4 +18,28 @@ export const addOrder = (localId, order) =>{
         })
     }
 
+}
+const initOrderSuccess = (orders) =>{
+   return{
+       type: INIT_ORDER,
+       order: orders
+   }
+}
+const initOrderFailed = (error) =>{
+    return{
+        type: INIT_ORDER_FAILED
+    }
+}
+
+export const initOrder = (localId) =>{
+    console.log(localId);
+    return dispatch =>{
+        Axios.get(`order/${localId}`)
+        .then(response =>{
+            dispatch(initOrderSuccess(response.data.order))
+        })
+        .catch(error =>{
+            dispatch(initOrderFailed(error))
+        })
+    }
 }

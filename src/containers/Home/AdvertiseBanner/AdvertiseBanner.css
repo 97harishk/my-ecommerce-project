@@ -12,12 +12,11 @@
 }
 .advertise-Banner .advertise-Banner-img{
     cursor: pointer;
-    width: 280px;
-    min-width: 200px;
+    width: 40%;
     height: 160px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     overflow: hidden;
 }
 .advertise-Banner .advertise-Banner-img img{
@@ -26,8 +25,4 @@
     height: 100%;
     margin-top: 20px;
     transition: 0.5s;
-}
-.advertise-Banner .advertise-Banner-img img:hover{
-    width: 108%;
-    height: 108%;
 }

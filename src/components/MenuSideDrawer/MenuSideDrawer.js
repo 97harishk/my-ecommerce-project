@@ -19,8 +19,7 @@ export class MenuSideDrawer extends Component {
         if(this.props.show){
             menuClass = 'menu-drawer open';
         }
-        let menu = !this.props.menu  ? <h3>No Menu Item is uploaded yet!</h3>
-        :this.props.menu.map(menu =>{
+        let menu = this.props.menu.map(menu =>{
             return <MenuItems key={menu._id} menu={menu} />
         }) 
         return (
@@ -49,6 +48,7 @@ const mapStateTOProps = state =>{
 const mapDispatchTOProps = dispatch =>{
     return{
         setMenu: () =>  dispatch(actionTypes.initMenu()),
-    }
+    } 
 }
+
 export default connect(mapStateTOProps, mapDispatchTOProps)(MenuSideDrawer)

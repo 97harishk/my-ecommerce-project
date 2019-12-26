@@ -17,10 +17,24 @@
     display: flex;
     width: 20%;
     height: 100%;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-
+.profile-snap{
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-snap img{
+    height: 100%;
+}
+.profile-icon{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 300;
+}
 @media(max-width: 500px){
     .nav-section{
         display: none;
@@ -34,22 +48,28 @@
 .header-bottom-icon{
     display: flex;
     height: 48px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    justify-content: space-between;
     text-decoration: none;
-    float: right;
     text-transform: uppercase;
 }
 .header-bottom-icon .nav-link{
     font-weight: bold;
-        padding: 12px 4px;
-        margin-right: 36px;
+    padding: 12px 4px;
     color: #333333;
+    display: flex;
+    align-items: center;
     letter-spacing: 2px;
     text-decoration: none;
     transition: 0.3s;
 } 
+.header-bottom-icon .nav-link i{
+    margin-left: 4px;
+}
 .header-bottom-icon .nav-link:active,
 .active
 {
     background-color: #ffffff;
     border-bottom: 4px solid #333333;
-}   
+} 

@@ -11,23 +11,26 @@ export class FeaturedProducts extends Component {
         this.props.setProducts();
      }
     render() {
-        let featureProduct = this.props.products.map(product => {
+
+        let featureProduct = this.props.products ?
+        this.props.products.map(product => {
             return <FeatureProduct key ={product._id} product={product}/>
         })
+        : <h1>No Product Found</h1>
         return (
             <div className="featured-product-section">
                 <div className="featured-product-top">
                         <div className="featured-product-title">
                             Featured Products
                         </div>
-                        <div className="featured-product-control">
+                        {/* <div className="featured-product-control">
                             <div className="left-arrow">
                                 <i className="fas fa-chevron-left"></i>
                             </div>
                             <div className="right-arrow">
                                 <i className="fas fa-chevron-right"></i>
                             </div>
-                        </div>
+                        </div> */}
                 </div>
                 <div className="featurd-product-container" >
                     <div className="featured-product-wrapper">

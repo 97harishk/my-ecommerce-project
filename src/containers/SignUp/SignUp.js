@@ -11,6 +11,7 @@ export class SignUp extends Component {
                     <div className="auth-container-top">
                             <label>Sign-up</label>
                     </div>
+                    <Input placeholder="Enter Name..." label="Name:" />
                     <Input placeholder="Phone No..." label="Enter Phone No:" />
                     <Input placeholder="Email **Optional**" label="Enter Email Id:" />
                     <Input placeholder="Password..." label="Enter Password:" type="password" />

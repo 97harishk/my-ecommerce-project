@@ -3,21 +3,15 @@ import './Banner.css'
 import LeftArrow from './LeftArrow/LeftArrow'
 import RightArrow from './RightArror/RightArrow'
 import Slide from './Slide/Slide'
+import slide1 from '../../assets/images/banner/slide-1.jpg'
+import slide2 from '../../assets/images/banner/slide-2.jpg'
+import slide3 from '../../assets/images/banner/slide-3.jpg'
 export class Banner extends Component {
     constructor(props) {
         super(props)
     
         this.state = {
-          images: [
-            "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/aurora.jpg",
-            "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/canyon.jpg",
-            "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/city.jpg",
-            "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/desert.jpg",
-            "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/mountains.jpg",
-            "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/redsky.jpg",
-            "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg",
-            "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg"
-          ],
+          images: [slide1, slide2, slide3],
           currentIndex: 0
         }
       }

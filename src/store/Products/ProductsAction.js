@@ -1,15 +1,15 @@
 import axios from '../../axios'
-import {phones} from '../../data/phones'
+//import {phones} from '../../data/phones'
 export const INIT_PRODUCTS = 'SET_PRODUCTS'
 export const INIT_PRODUCTS_FAILED = 'FETCH_PRODUCTS_FAILED'
 
-export const initProductsSuccess = (products) =>{
+export const initProductsSuccess = (phones) =>{
     let product = Object.assign([], phones.map(phone =>{
-        return {...phone, price: 1}
+        return phone
     })) 
         return {
             type: INIT_PRODUCTS,
-            products: phones
+            products: product
         }
 }
 export const initProductsFailed = () =>{
@@ -20,7 +20,8 @@ export const initProductsFailed = () =>{
 }
 export const  initProducts = () =>{
         return dispatch =>{
-         axios.get('http://localhost:8000/api/product')
+         //   dispatch(initProductsSuccess())
+         axios.get('/product')
          .then( response =>{
             dispatch(initProductsSuccess(response.data.product))
          })

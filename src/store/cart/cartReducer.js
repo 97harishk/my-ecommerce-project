@@ -1,10 +1,9 @@
 import * as actionTypes from './cartAction'
 
  const initialState = {
-     cartItem: [],
-     totalPrice: 1
+     cartItem: null,
+     totalPrice: 0
  }
-
  const reducer  = (state = initialState, action) =>{
     let updatedCart
      switch(action.type){

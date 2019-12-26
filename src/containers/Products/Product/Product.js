@@ -13,7 +13,7 @@ export class Product extends Component {
                     <ProductImage image={this.props.products.images} />
                 </div>
                 <div className="product-name">
-                  <Link to={"/productdetails/"+this.props.products.id+"/"+this.props.products.title} className="product-link-style">{this.props.products.title}</Link>
+                  <Link to={"/productdetails/"+this.props.products._id+"/"+this.props.products.title} className="product-link-style">{this.props.products.title}</Link>
                 </div>
                 <div className="product-price">
                     ₹ {this.props.products.price.toFixed(0)}

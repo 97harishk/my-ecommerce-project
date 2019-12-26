@@ -1,27 +1,47 @@
 import React, { Component } from 'react'
 import './Carts.css'
 import {connect} from 'react-redux'
+import {Redirect} from 'react-router-dom'
 import Button from '../../components/UI/Button/Button'
 import * as cartAction from '../../store/cart/cartAction'
 import * as orderAction from '../../store/Order/orderAction'
 import CartItems from './CartItems/CartItems'
 import Input from '../../components/UI/Input/Input'
+import Modal from '../../components/UI/Modal/Modal'
+import Spinner from '../../components/UI/Spinner/Spinner'
 export class Carts extends Component {
+    state ={
+        showModal: false
+    }
     componentDidMount(){
-        console.log('[set cart in cart page]',this.props.authState)
         this.props.setCart(this.props.authState.localId);
     }
-
+    showModalHandler = () =>{
+        this.setState({showModal: !this.state.showModal})
+    }
     render() {
-            let  cartItem = this.props.cartState.cartItem ? this.props.cartState.cartItem.map(cartItem =>{
+            let redirect = !this.props.authState.authenticated ?
+                <Redirect to="/sign-in" ></Redirect>
+                : null
+            let cartItem = <Spinner/>
+            cartItem = this.props.cartState.cartItem ? this.props.cartState.cartItem.map(cartItem =>{
             return <CartItems key={cartItem._id} product={cartItem} />
         })
-        : <h1>Your Cart Is Empty!</h1>
+        : <h1>No Item Found in Cart</h1>
         return (
             <div className="cart-section">
+                {/* {redirect} */}
+                 {this.state.showModal 
+                 ? <Modal   show={this.state.showModal} 
+                            toggleShow ={this.showModalHandler}
+                            click={() => this.props.addOrder(this.props.authState.localId,  this.props.cartState)}
+                    > 
+                    {cartItem}
+                    </Modal>
+                : null }
                 <div className="cart-container">
                     <div className="cart-head">
-                        Shopping Cart / <label className="darkblue" >Total Item:</label> <label className="red" >{this.props.cartState.cartItem ? cartItem.length : 0} </label>
+                        Shopping Cart / <label className="darkblue" >Total Item:</label> <label className="red" >{this.props.cartState.cartItem ? cartItem.length : 0   } </label>
                     </div>
                     <div className="cart-item-section">
                         <div className="products-list">
@@ -48,7 +68,7 @@ export class Carts extends Component {
                                     <Input placeholder="Coupen Code..." />
                                 </div>
                             </div>
-                            <Button click={() => this.props.addOrder(this.props.authState.localId,  this.props.cartState)} >Checkout</Button>
+                            <Button disable="true" click={this.showModalHandler} >Checkout</Button>
                         </div>
                     </div>
                 </div>

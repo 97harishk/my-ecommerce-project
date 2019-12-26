@@ -1,7 +1,7 @@
 import * as actionTypes from '../Products/ProductsAction'
 
 const InitialState = {
-    products:[],
+    products: null,
     error: false
 }
 

@@ -1,0 +1,21 @@
+.Nav-icon{
+    display: flex;
+    align-items : center;
+    padding: 4px 16px;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    text-decoration: none;
+    
+}
+.Nav-icon:hover{
+background-color: #ffffff;
+    
+}
+.Nav-icon label{
+    color: #333333;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+}

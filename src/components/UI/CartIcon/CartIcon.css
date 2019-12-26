@@ -1,14 +1,14 @@
 .Cart-icon{
-    height: 48px;
-    font-size: 48px;
+    height: 80px;
+    font-size: 80px;
     color:#ffffff;  
     display: flex;
     align-items : center;
    text-decoration: none;
 }
 .Cart-icon i{
-font-size: 0.6em;
-color: #ffffff;
+font-size: 0.5em;
+color: #333333;
 cursor: pointer;
 }
 .Cart-icon i:hover{

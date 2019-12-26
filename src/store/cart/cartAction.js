@@ -1,6 +1,6 @@
 import Axios from '../../axios'
-export const INIT_CART = ''
-export const INIT_CART_FAILED =''
+export const INIT_CART = 'INIT_CART'
+export const INIT_CART_FAILED ='INIT_CART_FAILED'
 
 export const ADD_CART = 'ADD_CART'
 export const ADD_CART_FAILED = 'ADD_CART_FAILED'

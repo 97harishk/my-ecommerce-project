@@ -1,0 +1,11 @@
+.profile-name{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+@media (max-width: 1200px) {
+    .profile-name{
+        display: none;
+    }
+}

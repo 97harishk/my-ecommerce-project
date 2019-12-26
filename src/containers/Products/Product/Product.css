@@ -67,9 +67,10 @@
     border: 2px solid #31629f;
 }
 .product-add-to-wishlist{
-    position: relative;
+    width: 100%;
     z-index: 10;
-    left: 180px;
+    text-align: right;
+
 }
 .product-add-to-wishlist i{
 font-size: 24px;

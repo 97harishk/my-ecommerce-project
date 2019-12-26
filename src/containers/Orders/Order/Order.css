@@ -1,0 +1,8 @@
+.order-item{
+    position: relative;
+    margin: 20px 0px;   
+    font-size: 18px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;  
+}

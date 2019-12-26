@@ -1,5 +1,110 @@
 .footer{
+    display: flex;
     width: 100%;
-    height: 500px;
+    padding: 0 20px;
+    box-sizing: border-box;
     background-color: #f9b115;
+}
+.contact-details-wrapper{
+    height: 100%;
+    width: 20%;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+.contact-type{
+    width: 100%;
+    color: #333333;
+    padding: 8px 16px;
+    margin-top: 4px;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    align-items: center;
+}
+.social-icons-wrapper{
+    width: 30%;
+    display: flex;
+    padding: 0px 48px;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+}
+.icon-type{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff;
+    cursor: pointer;
+    color: #333333;
+    text-decoration: none;
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
+    transition: 0.3s;
+}
+.icon-type:before{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    height: 100%;
+    width: 10px;
+    background: #b1b1b1;
+    transition: 0.3;
+    transform: rotate(0deg) skewY(-45deg);
+}
+.icon-type:after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 5px;
+    height: 10px;
+    width: 100%;
+    background: #b1b1b1;
+    transition: 0.3;
+    transform: rotate(0deg) skewX(-45deg);
+}
+.social-icons-wrapper .icon-type:hover{
+    color: #ffffff;
+}
+.social-icons-wrapper .icon-type:hover:nth-child(1){
+    background: #3b5599;
+}
+.social-icons-wrapper .icon-type:hover:nth-child(1):before{
+    background: #2e4a86;
+}
+.social-icons-wrapper .icon-type:hover:nth-child(1):after{
+    background: #4a69ad;
+}
+.social-icons-wrapper .icon-type:hover:nth-child(2){
+    background: #e4405f;
+}
+.social-icons-wrapper .icon-type:hover:nth-child(2):before{
+    background: #d02d4c;
+}
+.social-icons-wrapper .icon-type:hover:nth-child(2):after{
+    background: #f13c95;
+}
+.social-icons-wrapper .icon-type:hover:nth-child(3){
+    background: #0077b5;
+}
+.social-icons-wrapper .icon-type:hover:nth-child(3):before{
+    background: #036aa0;
+}
+.social-icons-wrapper .icon-type:hover:nth-child(3):after{
+    background: #0d82bf;
+}
+.social-icons-wrapper .icon-type:nth-child(4):hover{
+    background: #55acee ;
+    color: white;
+}
+.social-icons-wrapper .icon-type:hover:nth-child(4):after{
+    background: #4184b7 ;
+}
+.social-icons-wrapper .icon-type:hover:nth-child(4):before{
+    background: #4d9fde ;
 }

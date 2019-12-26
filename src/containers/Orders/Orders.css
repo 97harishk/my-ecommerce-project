@@ -1,0 +1,22 @@
+.order-section{
+    width: 100%;
+}
+.order-container{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    color: #333333;
+}
+.order-head{
+    font-size: 20px;
+    padding: 24px 0px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.order-items{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
