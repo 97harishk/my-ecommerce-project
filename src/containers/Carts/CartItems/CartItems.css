@@ -16,7 +16,7 @@
 .cart-items-image img{
     position: relative;
     left: 10%;
-    width: 80%;
+    width: auto;
     height: 100%;
     cursor: pointer;
     border-radius: 2px;

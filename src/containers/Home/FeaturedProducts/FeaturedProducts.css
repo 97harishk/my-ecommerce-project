@@ -36,18 +36,26 @@
     }
     .featured-product-control .left-arrow:hover,
     .featured-product-control .right-arrow:hover{
-        color: white;
-        background-color: #888;
-        box-shadow: 1px 1px 4px #888 ;
+        color: #333333;
     }
     .featurd-product-container{
+        position: relative;
         width: 100%;
-        height: 240px;
+        padding: 8px 0;
+        box-sizing: border-box;
         overflow: scroll;
+        overflow-y: hidden;
     }
     .featured-product-wrapper{
+        position: absolute;
         display: flex;
-        width: 100%;
+        width: 2140;
+        box-sizing: border-box;
+        align-items: center;
         flex-flow: row; 
+        transition: 0.3s ease-in-out;
+    }
+    .dn{
+        display: none;
     }
     

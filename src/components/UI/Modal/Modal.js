@@ -1,24 +1,27 @@
 import React, { Component } from 'react'
 import './Modal.css'
+import Transition from 'react-transition-group/Transition'
 import BackDrop from '../BackDrop/BackDrop'
 import Aux from '../../../hoc/Auxiliary/Auxuliary'
 import Button from '../Button/Button';
 export class Modal extends Component {
-    UNSAFE_componentWillUpdate() {
-        console.log('[modal component updated');
-    }
     render() {
+        let ModalClass = "Modal ModalClose"
+        if(this.props.show){
+            ModalClass = "Modal ModalOpen"
+        }
         return (
             <Aux>
-                <BackDrop show={this.props.show} clicked={this.props.toggleShow}/>
-                    <div className="Modal" 
-                    style ={{
-                        transform: this.props.show ? 'translateY(0)' : 'translateY(-100vh)',
-                        opacity: this.props.show ? '1' : '0'
-                    }}>
-                    {this.props.children}     
-                    <div><Button click={this.props.click}>Continue Shopping</Button></div> 
-                    </div>
+                {this.props.show ? <BackDrop show={this.props.show} clicked={this.props.toggleShow}/> : null }
+                {this.props.show ?             
+                            <div className={ModalClass}>
+                            {this.props.children}     
+                            <div>
+                                <Button click={this.props.click}>Continue Shopping</Button>
+                            </div> 
+                            </div>
+                        : null
+                 }                   
             </Aux>
         )
     }

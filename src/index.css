@@ -21,3 +21,13 @@ code {
 .jcsb{
   justify-content: space-between;
 }
+::-webkit-scrollbar{
+	width: 14px;
+}
+::-webkit-scrollbar-track{
+	background-color: #fff;
+}
+::-webkit-scrollbar-thumb{
+	background-color: #333333;
+	border-radius: 4px;
+}

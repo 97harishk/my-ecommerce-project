@@ -3,10 +3,8 @@ import './Header.css'
 import SearchBar from '../UI/SearchBar/SearchBar'
 import {NavLink} from 'react-router-dom'
 import Logo from '../Logo/Logo'
-import profileSnap from '../../assets/images/profile/61254836_2341365256138981_1058868704441270272_n.jpg'
-import CartIcon from '../UI/CartIcon/CartIcon'
-import WishListIcon from '../UI/WishListIcon/WishListIcon'
-import SignInUp from '../UI/SignInUp/SignInUp'
+import {connect} from 'react-redux'
+import * as actionTypes from '../../store/auth/authAction'
 import SideDrawerToggle from '../UI/SideDrawerToggle/SideDrawerToggle'
 import UserName from '../UI/UserName/UserName'
 import NavItems from '../NavItems/NavItems'
@@ -18,6 +16,11 @@ import NavItems from '../NavItems/NavItems'
          this.setState({showNavItems: !this.state.showNavItems})
      }
     render() {
+        let snap = this.props.authState.authenticated 
+                ?   <div className="profile-snap">
+                        <img src={this.props.authState.image} alt="Profile"/>
+                    </div>
+                :  null
         return (
             <header>
                 <div className="Header-content-section">
@@ -25,10 +28,11 @@ import NavItems from '../NavItems/NavItems'
                     <Logo />
                     <SearchBar/>
                     <div className="nav-section">
-                        <div className="profile-snap">
-                            <img src={profileSnap} alt="Profile"/>
-                        </div>
-                        <UserName />
+                        {snap}
+                        {this.props.authState.authenticated ?
+                        <UserName>{this.props.authState.name}</UserName>
+                        :  <UserName>Sign Up!</UserName>
+                        }
                         <div className="profile-icon">
                             <i className="fas fa-angle-down" onClick={this.showNavItemsHandler}></i>
                         </div> 
@@ -52,5 +56,14 @@ import NavItems from '../NavItems/NavItems'
         )
     }
 }
-
-export default Header
+const mapStateToProps = state =>{
+    return{
+        authState: state.authReducer
+    }
+}
+const mapDispatchToProps = dispatch =>{
+    return{
+        logOut: () => dispatch(actionTypes.logOut())
+   }    
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

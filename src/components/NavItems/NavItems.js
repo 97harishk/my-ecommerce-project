@@ -12,7 +12,7 @@ export class NavItems extends Component {
             <Aux>
                 <BackDrop clicked={this.props.click} show={this.props.show}/>
                     <div className="nav-items">
-                        <NavItem clicked={this.props.click} to="/wishlist" >wishlist</NavItem>
+                        {/* <NavItem clicked={this.props.click} to="/wishlist" >wishlist</NavItem> */}
                         <NavItem clicked={this.props.click} to="/orders" >orders</NavItem>
                         <NavItem clicked={this.props.click}  to="/cart" >cart</NavItem>
                         {this.props.authState.authenticated ?

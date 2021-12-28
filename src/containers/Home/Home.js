@@ -3,6 +3,8 @@ import './Home.css'
 import Banner from '../../components/Banner/Banner'
 import FeaturedProducts from './FeaturedProducts/FeaturedProducts'
 import AdverstiseBannner from './AdvertiseBanner/AdvertiseBanner'
+import TopSellingProducts from './TopSellingProducts/TopSellingProducts'
+import RecentlyViewedProducts from './RecentlyViewedProducts/RecentlyViewedProducts'
 export class Home extends Component {
 
     render() {
@@ -11,7 +13,9 @@ export class Home extends Component {
                     <main className="site-container">
                         <Banner />
                         <AdverstiseBannner />
-                        <FeaturedProducts />
+                        <FeaturedProducts />  
+                        <TopSellingProducts /> 
+                        <RecentlyViewedProducts />
                      </main>
             </div>
         )

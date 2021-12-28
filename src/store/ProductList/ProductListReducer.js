@@ -7,12 +7,11 @@ const initialState = {
 const reducer = (state =  initialState, action) =>{
     switch(action.type){
         case actionTypes.INIT_PRODUCT_DETAILS:
-            let product = Object.assign([], action.product)
             return{
                 ...state,
-                product: product
+                product: action.product
             }
-        case actionTypes.INIT_PRODUCT_DETAILS:
+        case actionTypes.INIT_PRODUCT_DETAILS_FAILED:
             return{
                 ...state,
                 error: true

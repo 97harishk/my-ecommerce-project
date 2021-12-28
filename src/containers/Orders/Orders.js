@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Orders.css'
-import {Redirect} from 'react-router-dom'
+// import {Redirect} from 'react-router-dom'
 import {connect} from 'react-redux'
 import * as actionType from '../../store/Order/orderAction'
 import Order from './Order/Order'
@@ -10,14 +10,14 @@ export class Orders extends Component {
         this.props.initOrder(this.props.authState.localId)
     }
     render() {
-        let redirect = !this.props.authState.authenticated ?
-                        <Redirect to="/sign-in" ></Redirect>
-                        : null
+        // let redirect = !this.props.authState.authenticated ?
+        //                 <Redirect to="/sign-in" ></Redirect>
+        //                 : null
         let order = <Spinner/> ;
         order  = this.props.orderState.orders ?
            this.props.orderState.orders.map(order =>{
             return <Order  key={order._id} order={order} />
-        })  
+        })
         : <h1>No Item Found In Order List!</h1>
         return (
             <div className="order-section">

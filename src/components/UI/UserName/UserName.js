@@ -1,10 +1,10 @@
 import React from 'react'
 import './UserName.css'
-export default function UserName() {
+export default function UserName(props) {
     return (
         
         <div className="profile-name">
-            <label>Harish Kumar</label>
+            <label>{props.children}</label>
         </div>
     )
 }

@@ -28,7 +28,15 @@ import * as actionTypes from './cartAction'
                 }
                 return item
             }))
-            return {...state , cartItem:  updatedCart}  
+            return {...state , cartItem:  updatedCart} 
+        case actionTypes.REMOVED_CART_ITEM :
+            return {...state, cartItem: state.cartItem.filter(item => {
+                if(item._id === action.payload){
+                    state.totalPrice -= item.price*item.itemQuantity
+                }
+                return item._id !== action.payload
+            }
+         )}
         default: 
         return {...state}
             

@@ -91,27 +91,27 @@ export class Products extends Component {
                         <div className="filter-brand-wrapper">
                             <div className="filter-item-by-brand">
                                 <label htmlFor="check1gb">1Gb & above</label>
-                                <input type="checkbox" id="check1gb" className="filter-check-item"/>
+                                <input type="radio" name="ram" id="check1gb" className="filter-check-item"/>
                             </div>
                             <div className="filter-item-by-brand">
                                 <label htmlFor="check2gb">2Gb & above</label>
-                                <input type="checkbox" id="check2gb" className="filter-check-item"/>
+                                <input type="radio" name="ram" id="check2gb" className="filter-check-item"/>
                             </div>
                             <div className="filter-item-by-brand">
                             <label htmlFor="check3gb">3Gb & above</label>
-                                <input type="checkbox" id="check3gb" className="filter-check-item"/>
+                                <input type="radio" name="ram" id="check3gb" className="filter-check-item"/>
                             </div>
                             <div className="filter-item-by-brand">
                                 <label htmlFor="check4gb">4Gb & above</label>
-                                <input type="checkbox" id="check4gb" className="filter-check-item"/>
+                                <input type="radio" name="ram" id="check4gb" className="filter-check-item"/>
                             </div>
                             <div className="filter-item-by-brand">
                                 <label htmlFor="check5gb">5Gb & above</label>
-                                <input type="checkbox" id="check5gb" className="filter-check-item"/>
+                                <input type="radio" name="ram" id="check5gb" className="filter-check-item"/>
                             </div>
                             <div className="filter-item-by-brand">
                                 <label htmlFor="check6gb">6Gb & above</label>
-                                <input type="checkbox" id="check6gb" className="filter-check-item"/>
+                                <input type="radio" name="ram" id="check6gb" className="filter-check-item"/>
                             </div>
                         </div>
                     </div>
@@ -124,27 +124,27 @@ export class Products extends Component {
                         <div className="filter-brand-wrapper">
                             <div className="filter-item-by-brand">
                                 <label htmlFor="check1d">5% & above</label>
-                                <input type="checkbox" id="check1d" className="filter-check-item"/>
+                                <input type="radio" name="discount" id="check1d" className="filter-check-item"/>
                             </div>
                             <div className="filter-item-by-brand">
                                 <label htmlFor="check2d">10% & above</label>
-                                <input type="checkbox" id="check2d" className="filter-check-item"/>
+                                <input type="radio" name="discount" id="check2d" className="filter-check-item"/>
                             </div>
                             <div className="filter-item-by-brand">
                             <label htmlFor="check3d">15% & above</label>
-                                <input type="checkbox" id="check3d" className="filter-check-item"/>
+                                <input type="radio" name="discount" id="check3d" className="filter-check-item"/>
                             </div>
                             <div className="filter-item-by-brand">
                                 <label htmlFor="check4d">25% & above</label>
-                                <input type="checkbox" id="check4d" className="filter-check-item"/>
+                                <input type="radio" name="discount" id="check4d" className="filter-check-item"/>
                             </div>
                             <div className="filter-item-by-brand">
                                 <label htmlFor="check5d">50% & above</label>
-                                <input type="checkbox" id="check5d" className="filter-check-item"/>
+                                <input type="radio" name="discount" id="check5d" className="filter-check-item"/>
                             </div>
                             <div className="filter-item-by-brand">
                                 <label htmlFor="check6d">75% & above</label>
-                                <input type="checkbox" id="check6d" className="filter-check-item"/>
+                                <input type="radio" name="discount" id="check6d" className="filter-check-item"/>
                             </div>
                         </div>
                     </div>

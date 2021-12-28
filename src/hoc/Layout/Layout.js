@@ -19,9 +19,9 @@ export class Layout extends Component {
         return (
             <Aux>
                 <MenuSideDrawer show ={this.state.showSideDrawer} click = {this.toggleSideDrawer} />
-                <Header click = {this.toggleSideDrawer}/>
-                    {this.props.children}
-                <Footer />
+                    <Header click = {this.toggleSideDrawer}/>
+                        {this.props.children}
+                    <Footer />
             </Aux>
         )
     }

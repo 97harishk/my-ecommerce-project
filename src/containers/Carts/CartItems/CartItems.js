@@ -19,18 +19,19 @@ export class CartItems extends Component {
         return (
             <div className="cart-items">
             <div className="cart-items-image">
-                <img src={img1} alt="Product" />
+                <img src={this.props.product.images[0]} alt="Product" />
             </div>    
             <div className="cart-items-desc">
                 <div className="cart-item-title">
-                    {this.props.product.name}
+                    {this.props.product.title}
                 </div>
-                {/* <p>{this.props.product.description}</p> */}
+                <p>{this.props.product.description}</p>
+                <label className="cp red" onClick={() =>this.props.removeCartItem(this.props.authState.localId, this.props.product._id)}>Remove</label>
             </div>  
             <div className="cart-items-check">
                 <div className="cart-items-price">
                     <label>Price:</label>
-                    ₹ {this.props.product.price}
+                    ₹ {this.props.product.price.toFixed(2)}
                 </div>
                 <div className="cart-items-quantity">
                     <label>Quantity:</label>
@@ -48,7 +49,7 @@ export class CartItems extends Component {
                 </div>
                 <div className="cart-items-total">
                     <label>Sub Total:</label>
-                    {this.props.product.subTotal}
+                    {this.props.product.subTotal.toFixed(2)}
                 </div>
             </div>                      
         </div>
@@ -64,7 +65,8 @@ const mapStateToProps = state =>{
 const mapDispatchToProps = dispatch =>{
     return{
         decrementCartItem: (userId, productId, qty) => dispatch(cartAction.decrementItemQuantity(userId, productId, qty)),
-        incrementCartItem: (userId, productId, qty) => dispatch(cartAction.incrementItemQuantity(userId, productId, qty))
+        incrementCartItem: (userId, productId, qty) => dispatch(cartAction.incrementItemQuantity(userId, productId, qty)),
+        removeCartItem: (userId, productId) => dispatch(cartAction.removeProductFromCart(userId, productId))
    }    
 }
 export default connect(mapStateToProps, mapDispatchToProps)(CartItems)

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './Product.css'
+import {connect} from 'react-redux'
+import * as cartAction from '../../../store/cart/cartAction'
 import ProductImage from '../../../components/UI/Image/Image'
 import {Link} from 'react-router-dom'
 export class Product extends Component {
@@ -18,12 +20,21 @@ export class Product extends Component {
                 <div className="product-price">
                     ₹ {this.props.products.price.toFixed(0)}
                 </div>
-                <div className="product-add-to-cart">
-                    Add To Cart
+                <div className="product-add-to-cart" onClick={() => this.props.addCart(this.props.authState.localId, this.props.products._id)}>
+                <label>Add TO Cart</label>
                 </div>
             </div>
         )
     }
 }
-
-export default Product
+const mapStateToProps = state =>{
+    return{
+        authState: state.authReducer
+    }
+}
+const mapDispatchToProps = dispatch =>{
+    return{
+        addCart: (userId, productId) => dispatch(cartAction.addProductToCart(userId, productId))
+       }    
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Product)

@@ -2,8 +2,11 @@ import Axios from '../../axios'
 export const INIT_CART = 'INIT_CART'
 export const INIT_CART_FAILED ='INIT_CART_FAILED'
 
-export const ADD_CART = 'ADD_CART'
-export const ADD_CART_FAILED = 'ADD_CART_FAILED'
+export const ADD_CART_ITEM = 'ADD_CART_ITEM'
+export const ADD_CART_ITEM_FAILED = 'ADD_CART_ITEM_FAILED'
+
+export const REMOVED_CART_ITEM = 'REMOVED_CART_ITEM'
+export const REMOVED_CART_ITEM_FAILED = 'REMOVED_CART_ITEM_FAILED'
 
 export const INCREMENT_CART_ITEM = 'INCREMENT_CART_ITEM'
 export const DECREMENT_CART_ITEM = 'DECREMENT_CART_ITEM'
@@ -16,7 +19,7 @@ const initCartSuccess = (payload, totalPrice) =>{
     }
 }
 
-const initCartFailed = () =>{
+const initCartFailed = () =>{   
     return {
         type: INIT_CART_FAILED
     }
@@ -45,6 +48,7 @@ export const addProductToCart = (userId, product) =>{
     let productId = {
         productId: product
     }
+    console.log(product);
     return dispatch =>{
         Axios.post('/cart/create-cart/'+userId , productId)
         .then(response =>{
@@ -56,6 +60,12 @@ export const addProductToCart = (userId, product) =>{
     }
 }
 
+const removeProductFromCartSuccess = (product) =>{
+    return{
+        type: REMOVED_CART_ITEM,
+        payload: product
+    }
+}
 export const removeProductFromCart = (userId, product) =>{
     let productId = {
         productId: product
@@ -63,7 +73,7 @@ export const removeProductFromCart = (userId, product) =>{
     return dispatch =>{
         Axios.post('/cart/remove-cart/'+userId , productId)
         .then(response =>{
-            console.log(response)
+            dispatch(removeProductFromCartSuccess(product))
         })
         .catch(error =>{
             console.log(error)

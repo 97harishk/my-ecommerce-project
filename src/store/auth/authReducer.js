@@ -13,6 +13,8 @@ const reducer = (state = initialState, action) =>{
         case actionTypes.LOGIN_FAILED :
         case actionTypes.LOGOUT_SUCCESS :
             return ({...state, message: action.message, localId: '', authenticated: false})
+        case actionTypes.REGISTER_SUCCESS:
+            return({...state, ...action.payload, authenticated: true})
         default :
         return ({...state})
     }

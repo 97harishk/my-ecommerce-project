@@ -1,8 +1,6 @@
 .banner-img{
     width: 100%;
     height: 500px;
-     background-image: linear-gradient(45deg, blue, purple, blue);
-     transition: 0.5s;
 }
 .banner-img img{
     width: 100%;

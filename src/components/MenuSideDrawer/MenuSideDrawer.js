@@ -5,6 +5,7 @@ import Logo from '../Logo/Logo';
 import {connect} from 'react-redux'
 import * as actionTypes from '../../store/menu/menuAction'
 import MenuItems from './MenuItems/MenuItems';
+import spinner from '../UI/Spinner/Spinner';
 export class MenuSideDrawer extends Component {
   componentDidMount(){
     this.props.setMenu();
@@ -19,9 +20,13 @@ export class MenuSideDrawer extends Component {
         if(this.props.show){
             menuClass = 'menu-drawer open';
         }
-        let menu = this.props.menu.map(menu =>{
+        let menu = <spinner/>
+        menu = 
+        this.props.menu ?
+        this.props.menu.map(menu =>{
             return <MenuItems key={menu._id} menu={menu} />
         }) 
+        :<h3>No Menu Items Found!</h3>
         return (
             <div>
                 <BackDrop show ={this.props.show} clicked={this.props.click}/>

@@ -39,7 +39,7 @@ export class SignIn extends Component {
                             <label>login</label>
                     </div>
                     <form onSubmit={this.loginSubmitHanlder}>
-                        <Input placeholder="Phone No..." label="Enter Phone No:" type="email" onChange={(event) => this.onInputChangeHandler(event)} name="email" />
+                        <Input placeholder="Phone No..." label="Enter Phone No:" type="email" onChange={(event) => this.onInputChangeHandler(event)} name="email" autoFocus/>
                         <Input placeholder="Password..." label="Enter Valid Password:" type="password" onChange={(event) => this.onInputChangeHandler(event)} name="password" />
                         {button}
                     </form>
