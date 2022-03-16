@@ -15,6 +15,7 @@ import SignIn from './containers/SignIn/SignIn';
 import SignUp from './containers/SignUp/SignUp';
 import Products from './containers/Products/Products';
 import ProductDetails from './containers/ProductDetails/ProductDetails';
+import { MUI } from './components/mui/MUI';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer,composeEnhancers(applyMiddleware(thunk)));
@@ -32,6 +33,7 @@ function App() {
               <Route path='/sign-up' component={SignUp} />
               <Route path='/products' component={Products} />
               <Route path='/productdetails/:id' component={ProductDetails} />
+              <Route exact path='/mui' component={MUI} />   
               <Route exact path='/' component={Home} />         
             </Switch>
           </Layout>

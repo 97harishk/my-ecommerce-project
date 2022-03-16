@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Modal.css'
-import Transition from 'react-transition-group/Transition'
+// import Transition from 'react-transition-group/Transition'
 import BackDrop from '../BackDrop/BackDrop'
 import Aux from '../../../hoc/Auxiliary/Auxuliary'
 import Button from '../Button/Button';

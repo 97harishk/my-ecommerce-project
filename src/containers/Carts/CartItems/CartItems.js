@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './CartItems.css'
 import {connect} from 'react-redux'
 import * as cartAction from '../../../store/cart/cartAction'
-import img1 from '../../../assets/images/product/shopping.png'
+// import img1 from '../../../assets/images/product/shopping.png'
 export class CartItems extends Component {
     decrementCartItemQuantity = (itemId, qty) =>{
         if(qty <= 1){

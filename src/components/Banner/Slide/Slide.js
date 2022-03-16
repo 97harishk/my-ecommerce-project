@@ -4,7 +4,7 @@ export class Slide extends Component {
     render() {
         return (
             <div className="banner-img">
-                <img src={this.props.imageName} />
+                <img alt="slide" src={this.props.imageName} />
             </div>
         )
     }

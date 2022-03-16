@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './ProductDetails.css'
-import {phones} from '../../data/phones'
+// import {phones} from '../../data/phones'
 import {connect} from 'react-redux'
 import ProductSnaps from './ProductSnaps/ProductSnaps'
 import * as actionTypes from '../../store/ProductList/ProductListAction'

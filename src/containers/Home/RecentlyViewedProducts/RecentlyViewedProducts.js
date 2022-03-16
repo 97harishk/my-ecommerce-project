@@ -36,7 +36,7 @@ export class RecentlyViewedProducts extends Component {
         let recentlyViewed = <Spinner />
         recentlyViewed = 
             images ?
-        images.map((img, i) => <div className="image-box" key={i}><img src={img} /></div>)
+        images.map((img, i) => <div className="image-box" key={i}><img alt="product" src={img} /></div>)
         : <h1>No Product Found</h1>
         return (
             <div className="featured-product-section">
